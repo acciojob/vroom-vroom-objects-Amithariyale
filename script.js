@@ -5,11 +5,12 @@ function Car(make, model) {
 			this.make=make;
 			this.model=model;
 		}
-		getMakeModel(){
-			return `${this.make} ${this.model}`;
-		}
+		
 	}
 }
+Car.prototype.getMakeModel=fuction(){
+			return `${this.make} ${this.model}`;
+		}
 
 function SportsCar(make, model, topSpeed) {
 	class SportsCar extends Car {
@@ -17,11 +18,12 @@ function SportsCar(make, model, topSpeed) {
 			super(make,model);
 			this.topSpeed=topSpeed;
 		}
-		getTopSpeed(){
-			return this.topSpeed;
-		}
+		
 	}
 }
+SportsCar.prototype.getTopSpeed=function(){
+			return this.topSpeed;
+		}
 
 // Do not change the code below
 window.Car = Car;
